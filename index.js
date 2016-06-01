@@ -59,6 +59,8 @@ function combine (errors) {
 function improve (err, prefix) {
   if (err.candy) return err
 
+  if (!err.stack) return err
+
   prefix = prefix || '  \u2716 '
 
   // clean the stack
